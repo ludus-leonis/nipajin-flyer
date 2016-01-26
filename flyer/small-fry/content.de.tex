@@ -1,20 +1,22 @@
 % (c) 2009-2016 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply one-way compatible licenses.
 
-\renewcommand{\flyerVersion}{v0.1}
+\renewcommand{\flyerVersion}{v1.1}
 
 % CHANGELOG-de
 %
-% v0.1
-%   - Erstfassung
+% v1.1
+%   - migrated to LaTeX
+% v1.0
+%   - first version
 
 % --- language dependent typography stuff --------------------------------------
 
 \renewcommand{\say}[1]{„\textit{#1}“}
 \setdefaultlanguage[spelling=new]{german}
 
-\renewcommand{\fsNormal}{\fontsize{11pt}{13.2pt plus 0pt minus 0pt}}
-%\renewcommand{\fsSmall}{\fontsize{9pt}{10pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsFront}{\fontsize{11pt}{13.2pt plus 0pt minus 0pt}}
+\renewcommand{\fsBack}{\fontsize{11pt}{13.2pt plus 0pt minus 0pt}}
 
 % --- pdf metadata -------------------------------------------------------------
 
@@ -63,7 +65,7 @@
 	\makebox[\linewidth][l]{\spaceout{ROLLENSPIEL!}} \par%
 }
 
-\renewcommand{\settingHeadline}{Szenario: Kleine Fische}
+\renewcommand{\settingHeadline}{Kleine Fische}
 
 \renewcommand{\settingText}{%
 	\noindent

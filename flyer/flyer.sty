@@ -10,20 +10,24 @@
 
 % --- page & basic text setup --------------------------------------------------
 
-\usepackage[driver=none]{geometry}
-
-\geometry{% A6
-	a6paper,
-	textwidth=98mm,
-	textheight=142.5mm,
-	inner=3.5mm,
-	top=3.5mm,
-	footskip=3.5mm,
-}
-
 \hypersetup{
 	pdfpagelayout=TwoPageLeft,
 }
+
+\usepackage[driver=none]{geometry}
+
+% we use 3mm bleed on each side here - note: that is hardcoded everywhere.
+\geometry{% A6+3mm
+	papersize={111mm,154mm}, % 3mm extra on each side
+	textwidth=98mm,
+	textheight=142.5mm,
+	inner=6.5mm, %3mm extra
+	top=6.5mm, % 3mm extra
+	footskip=3.5mm,
+}
+
+% we crop away the bleed for the Web version. uncomment the following two lines to get the print version
+\usepackage[width=105mm,height=148mm,center]{crop} % crop away the 3mm
 
 % --- fonts & symbols ----------------------------------------------------------
 
@@ -31,6 +35,9 @@
 	Path=\fontsearchpath/caveatbrush/,
 	Mapping=tex-text
 ]{CaveatBrush-Regular}
+
+\newcommand{\fsFront}{\fontsize{10pt}{12pt plus 0pt minus 0pt}}
+\newcommand{\fsBack}{\fontsize{10pt}{12pt plus 0pt minus 0pt}}
 
 % --- images -------------------------------------------------------------------
 
