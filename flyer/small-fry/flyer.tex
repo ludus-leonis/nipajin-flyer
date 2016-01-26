@@ -1,0 +1,107 @@
+% (c) 2015-2016 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+
+\documentclass{article}
+
+\newcommand{\fontsearchpath}{../../fonts}
+\usepackage{nipajin}
+\usepackage{flyer}
+
+% each language file has to re-define the following items:
+\newcommand{\flyerVersion}{v0.0}
+\newcommand{\rulesTitle}{}
+\newcommand{\rulesHeadline}{}
+\newcommand{\rulesText}{}
+\newcommand{\rulesURL}{}
+\newcommand{\settingTitle}{}
+\newcommand{\settingHeadline}{}
+\newcommand{\settingText}{}
+\newcommand{\settingURL}{}
+
+% Makefile will map the current language into those files
+\input{content.tex}
+
+\newbox\formbox
+
+% ##############################################################################
+% ##############################################################################
+% ##############################################################################
+% ##############################################################################
+% ##############################################################################
+
+\begin{document}\fftext\sodef\spaceout{}{0pt plus 1fil}{.4em plus 1fil}{0pt}
+
+% d12 background image
+\renewcommand{\bgboxinjectonce}{
+	\put(0,0){\parbox[b][\paperheight]{\paperwidth}{
+		\vfill\centering\includegraphics[height=148mm]{\image{die.pdf}}\vfill}
+	}
+}
+
+% the black top box
+{\fontsize{12.5mm}{12mm}\selectfont\rulesTitle}
+\vspace*{3mm}
+\backgroundtop{trueBlack}{35mm}
+
+% the red headline
+\mybanner{\MakeUppercase{\rulesHeadline}}{\rulesHeadline}
+\vspace*{2mm}
+
+% the main part
+{\ffhand\fsFront\selectfont
+
+	\rulesText
+
+}
+
+% the red footer
+\backgroundbottom{primary}{14mm}
+\vfill
+\centerline{%
+	\raisebox{-1.75mm}{\href{http://creativecommons.org/licenses/by-sa/4.0/}{%
+		\includegraphics[height=20pt]{\image{cc-by-sa.pdf}}%
+	}}%
+	\hfill%
+	\fontsize{16pt}{16pt}\selectfont\color{white}\rulesURL%
+}
+
+\newpage % ---------------------------------------------------------------------
+
+% gold is the new red
+\DefineNamedColor{named}{primary}{cmyk}{0.00,0.31,0.65,0.29} % gold
+
+% gangster background image
+\renewcommand{\bgboxinjectonce}{
+	\put(0,0){\parbox[b][\paperheight]{\paperwidth}{
+		\vfill\centering\includegraphics[height=148mm]{\image{gangster.pdf}}\vfill}
+	}
+}
+
+% the black top box
+{\fontsize{12.5mm}{12mm}\selectfont\settingTitle}
+\vspace*{3mm}
+\backgroundtop{trueBlack}{200mm}
+
+% the gold headline
+\mybanner{\MakeUppercase{\settingHeadline}}{\settingHeadline}
+\vspace*{2mm}
+
+% the main part
+{\ffhand\fsBack\selectfont\color{white}
+
+	\settingText
+
+}
+
+% the gold footer
+\backgroundbottom{primary}{14mm}
+\vfill
+\centerline{%
+	\fontsize{16pt}{16pt}\selectfont\color{white}\settingURL%
+	\hfill%
+	\raisebox{-1.75mm}{\href{http://creativecommons.org/licenses/by-sa/4.0/}{%
+		\includegraphics[height=20pt]{\image{cc-by-sa.pdf}}%
+	}}%
+}
+
+\end{document}

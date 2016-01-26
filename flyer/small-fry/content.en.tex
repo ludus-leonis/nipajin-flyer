@@ -1,0 +1,89 @@
+% (c) 2009-2016 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply one-way compatible licenses.
+
+\renewcommand{\flyerVersion}{v1.0}
+
+% CHANGELOG-en
+%
+% v1.0
+%   - first version
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\say}[1]{“\textit{#1}”}
+\setdefaultlanguage{english}
+
+\renewcommand{\fsFront}{\fontsize{11.75pt}{13.5pt plus 0pt minus 0pt}}
+\renewcommand{\fsBack}{\fontsize{11pt}{13.2pt plus 0pt minus 0pt}}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+}
+
+\hypersetup{
+	pdftitle={NIP'AJIN Leaflet-RPG},
+	pdfauthor={Markus Leupold-Loewenthal},
+	pdfsubject={A NIP'AJIN-RPG on a leaflet.},
+	pdfkeywords={nipajin, nip'ajin, role playing game, system, free, RPG, Leaflet}
+}
+
+% --- front page ---------------------------------------------------------------
+
+\renewcommand{\rulesTitle}{%
+	\noindent\color{primary}%\fontsize{10.5mm}{12mm}\selectfont%
+	\makebox[\linewidth][l]{\spaceout{PLAY ME -- I AM A}} \par%
+	\noindent\color{white}%\fontsize{10.5mm}{12mm}\selectfont%
+	\makebox[\linewidth][l]{\fffancy\spaceout{LEAFLET RPG!}} \par%
+}
+
+\renewcommand{\rulesHeadline}{Rules}
+
+\renewcommand{\rulesText}{%
+
+	\noindent
+	This leaflet contains an abridged version of \keyword{NIP'AJIN}, a free and universal pen-and-paper role playing game.
+
+	\bigskip
+
+	\noindent
+	Your \keyword{character} needs a d4, d6, d8, d10 and d12. One of those you designate as \keyword{hit die} \HD\ and put it, highest number up, on the table. If this die ever is reduced below 1, your character is \keyword{overcome} and drops out of the game. The remaining four dice are your \keyword{available dice}.
+
+	When the (timely) outcome of your character's task is unclear, you have to pick an \keyword{action die} \AD\ from your available dice. Roll it. If nobody opposes you, the task succeeds on a \keyword{roll of four or higher}.
+
+	If your character attacks opponents, their players have to pick a \keyword{reaction die} \RD\ from their available dice and roll it. If your \AD\ gets a higher result than the \RD, your attack was successful -- even if it results in less than four. Your opponent’s \HD\ now drops by 1.
+
+	After each roll, the used \AD/\RD\ are \keyword{exhausted} and placed aside. Once all your character's dice are exhausted, they become available again.
+
+	\bigskip
+
+	\hfill Now you can play the scenario on the other side!
+}
+
+\renewcommand{\rulesURL}{\href{http://ludus-leonis.com/en/nipajin}{LUDUS-LEONIS.COM/en/}}
+
+% --- back page ----------------------------------------------------------------
+\renewcommand{\settingTitle}{%
+	\noindent\color{primary}\fontsize{5mm}{6mm}\selectfont% , and that day may never come,
+	\makebox[\linewidth][l]{\spaceout{Someday, and that day may never}} \par%
+	\noindent\color{primary}\fontsize{5mm}{6mm}\selectfont% , and that day may never come,
+	\makebox[\linewidth][l]{\spaceout{come, I'll call upon you to play this}} \par%
+	\noindent\color{white}\fontsize{12.5mm}{11mm}\selectfont%
+	\makebox[\linewidth][l]{\fffancy\spaceout{LEAFLET RPG!}} \par%
+}
+
+\renewcommand{\settingHeadline}{Small Fry}
+
+\renewcommand{\settingText}{%
+	\noindent
+	This scenario for 2 to 6 characters uses the rules from the other side.
+
+	Decide upon a city, a criminal organization and a time period, for example the Mafia in New York during the 1950s or the Yakuza in contemporary Osaka. Your characters are \keyword{petty crooks}, forced to work as a group by the local \keyword{Big Boss} -- the Game Master. Each character is named, briefly described and uses the d4 as \HD. During the game, you try to outrival and overcome the other characters to become the right-hand man of the Big Boss.
+
+	The game takes place over several \keyword{episodes} that span a week each. Each episode, the Big Boss assigns a job to the group, for example a heist, an abduction, or collecting protection money. It doesn't matter if those jobs succeed, but they set the stage on which the characters compete with each other. Each episode, each player can attempt to harm one other character and reduce his \HD\ by 1. Overcome characters leave the city at the end of the week.
+
+	Once per game, characters that feel treated unfairly may visit the Big Boss to \keyword{ask for a favour}. Their players pick a \AD, and if they roll 4+, their plea was heard. The Big Boss sends his goons to beat everyone up who harmed that character in this week (-2 on their \HD). If the roll is failed, however, the pleaing character gets beaten up instead.
+
+}
+
+\renewcommand{\settingURL}{\href{http://ludus-leonis.com/nipajin}{LUDUS-LEONIS.COM/en/}}

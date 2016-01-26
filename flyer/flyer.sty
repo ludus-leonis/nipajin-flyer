@@ -1,0 +1,82 @@
+% (c) 2015-2016 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+
+\ProvidesFile{flyer.sty}
+\ProvidesPackage{flyer}
+
+% --- common packages ----------------------------------------------------------
+
+\usepackage{soul} % for cute letter spacing to stretch text to match a width
+
+% --- page & basic text setup --------------------------------------------------
+
+\hypersetup{
+	pdfpagelayout=TwoPageLeft,
+}
+
+\usepackage[driver=none]{geometry}
+
+% we use 3mm bleed on each side here - note: that is hardcoded everywhere.
+\geometry{% A6+3mm
+	papersize={111mm,154mm}, % 3mm extra on each side
+	textwidth=98mm,
+	textheight=142.5mm,
+	inner=6.5mm, %3mm extra
+	top=6.5mm, % 3mm extra
+	footskip=3.5mm,
+}
+
+% we crop away the bleed for the Web version. uncomment the following two lines to get the print version
+\usepackage[width=105mm,height=148mm,center]{crop} % crop away the 3mm
+
+% --- fonts & symbols ----------------------------------------------------------
+
+\newfontfamily{\ffhand}[
+	Path=\fontsearchpath/caveatbrush/,
+	Mapping=tex-text
+]{CaveatBrush-Regular}
+
+\newcommand{\fsFront}{\fontsize{10pt}{12pt plus 0pt minus 0pt}}
+\newcommand{\fsBack}{\fontsize{10pt}{12pt plus 0pt minus 0pt}}
+
+% --- images -------------------------------------------------------------------
+
+\newcommand{\image}[1]{images/#1}
+
+% --- header and footer --------------------------------------------------------
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% --- redefine some styles for flyer use/size ----------------------------------
+
+\renewcommand{\keyword}[1]{{\color{primary}#1}}
+
+\renewcommand{\mybanner}[3][none]{% regular headlines: red banners across page, shadowed font
+\phantomsection\addcontentsline{toc}{section}{#3}{%
+	\centerline{\begin{tikzpicture}%
+		\begin{ocg}{\backgroundlayername}{oc1}{1}
+			\node [
+				fill=primary,
+				decorate,
+				decoration={random steps,segment length=26pt,amplitude=0.33pt},
+				minimum height=1.00cm,
+				text width=1.5\paperwidth
+			]{};
+		\end{ocg}
+		\node [
+			text height=16pt,
+			text depth=4pt,
+			xshift=1.00pt,
+			yshift=-1.00pt
+		]{{\itshape\fffancy\fontsize{20pt}{20pt}\selectfont\color{black}\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}};
+		\begin{ocg}{\backgroundlayername}{oc1}{1}
+			\node [
+				text height=16pt,
+				text depth=4pt
+			]{{\itshape\fffancy\fontsize{20pt}{20pt}\selectfont\color{white}\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}};
+		\end{ocg}
+	\end{tikzpicture}}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
+}}
