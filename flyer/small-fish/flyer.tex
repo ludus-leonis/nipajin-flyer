@@ -31,6 +31,13 @@
 
 \begin{document}\fftext\fsNormal\selectfont\sodef\spaceout{}{0pt plus 1fil}{.4em plus 1fil}{0pt}
 
+% d12 background image
+\renewcommand{\bgboxinjectonce}{
+	\put(0,0){\parbox[b][\paperheight]{\paperwidth}{
+		\vfill\centering\includegraphics[height=148mm]{\image{die.pdf}}\vfill}
+	}
+}
+
 % the black top box
 {\fontsize{13mm}{12mm}\selectfont\rulesTitle}
 \vspace*{3mm}
@@ -47,11 +54,11 @@
 \backgroundbottom{primary}{11mm}
 \vfill
 \centerline{%
-	\fontsize{20pt}{20pt}\selectfont\color{white}\rulesURL%
-	\hfill%
 	\raisebox{-1.25mm}{\href{http://creativecommons.org/licenses/by-sa/4.0/}{%
 		\includegraphics[height=20pt]{\image{cc-by-sa.pdf}}%
 	}}%
+	\hfill%
+	\fontsize{20pt}{20pt}\selectfont\color{white}\rulesURL%
 }
 
 \newpage % ---------------------------------------------------------------------
