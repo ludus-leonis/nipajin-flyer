@@ -21,6 +21,10 @@
 	footskip=3.5mm,
 }
 
+\hypersetup{
+	pdfpagelayout=TwoPageLeft,
+}
+
 % --- fonts & symbols ----------------------------------------------------------
 
 \newfontfamily{\ffhand}[
@@ -56,14 +60,14 @@
 			]{};
 		\end{ocg}
 		\node [
-			text height=16.5pt,
+			text height=16pt,
 			text depth=4pt,
 			xshift=1.00pt,
 			yshift=-1.00pt
 		]{{\itshape\fffancy\fontsize{20pt}{20pt}\selectfont\color{black}\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}};
 		\begin{ocg}{\backgroundlayername}{oc1}{1}
 			\node [
-				text height=16.5pt,
+				text height=16pt,
 				text depth=4pt
 			]{{\itshape\fffancy\fontsize{20pt}{20pt}\selectfont\color{white}\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}};
 		\end{ocg}
