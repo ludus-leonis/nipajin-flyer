@@ -1,0 +1,79 @@
+% (c) 2009-2016 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply one-way compatible licenses.
+
+\renewcommand{\flyerVersion}{v0.1}
+
+% CHANGELOG-de
+%
+% 0.1
+%   - first Version
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\say}[1]{„\textit{#1}”}
+\setdefaultlanguage{polish}
+
+\renewcommand{\fsNormal}{\fontsize{12pt}{13.9pt plus 0pt minus 0pt}}
+%\renewcommand{\fsSmall}{\fontsize{9pt}{10pt plus 0.1pt minus 0pt}}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={Nieskomplikowany, uniwersalny system RPG.},
+	pdfkeywords={nipajin, nip'ajin, system, uniwersalny, RPG}
+}
+
+% --- front page ---------------------------------------------------------------
+
+\renewcommand{\rulesTitle}{%
+	\noindent\color{primary}\fontsize{10.5mm}{12mm}\selectfont%
+	\makebox[\linewidth][l]{\spaceout{PRZEDSTAWIAMY WAM}} \par%
+	\noindent\color{white}\fontsize{10.5mm}{12mm}\selectfont%
+	\makebox[\linewidth][l]{\fffancy\spaceout{ERPEGOWA ULOTKA}} \par%
+}
+
+\renewcommand{\rulesHeadline}{Zasady gry}
+
+\renewcommand{\rulesText}{%
+
+	\noindent
+	Ta ulotka zawiera skrót zasad \keyword{\nipajin} -- darmowej, uniwersalnej mechaniki RPG.
+
+	Twoja \keyword{Postać} potrzebuje po jednej kości k4, k6, k8, k10 oraz k12. Wybierz, która z tych kości stanie się twoją \keyword{kością oporu} \HD\ i połóż ją tak, by jej najwyższy wynik był u góry. Jeśli wartość kości spadnie poniżej jedynki, Postać zostaje \keyword{pokonana} i wypada z gry. Reszta puli stanowi twoje \keyword{dostępne kości}.
+
+	Jeżeli nie będziecie pewni, czy Postaci uda się jakaś czynność, wybierasz jedną \keyword{kość akcji} \AD\ spośród swoich dostępnych kości i rzucasz nią. Jeśli nikt nie przeszkadza, wystarczy wyrzucić \keyword{cztery lub więcej}, by osiągnąć sukces.
+
+	Jeśli twoja czynność ma na celu skrzywdzenie przeciwnika, musi on wybrać swoją \keyword{kość reakcji} \RD. Jeśli twój wynik z \AD\ ma wyższą wartość niż \RD, atak kończy się sukcesem i wartość \HD\ przeciwnika spada o jeden.
+
+	Wykorzystana kość zostaje \keyword{zużyta} i kładziesz ją na bok. Po zużyciu wszystkich kości odzyskujesz całą pulę.
+
+	\bigskip
+
+	\hfill Jasne? To teraz rozegraj scenariusz na drugiej stronie!
+}
+
+\renewcommand{\rulesURL}{\href{http://ludus-leonis.com/pl/nipajin}{LUDUS-LEONIS.COM/pl}}
+
+% --- back page ----------------------------------------------------------------
+
+\renewcommand{\settingTitle}{%
+	\noindent\color{primary}\fontsize{14pt}{12mm}\selectfont%
+	\makebox[\linewidth][l]{\spaceout{„Mam dla ciebie ulotkę nie do wyrzucenia.}”} \par%
+	\noindent\color{white}\fontsize{10.5mm}{12mm}\selectfont%
+	\makebox[\linewidth][l]{\fffancy\spaceout{ERPEGOWA ULOTKA}} \par%
+}
+
+\renewcommand{\settingHeadline}{SCENARIUSZ: PŁOTKI}
+
+\renewcommand{\settingText}{%
+	\noindent
+	Scenariusz ten jest przeznaczony dla 2 do 6 osób i korzysta z reguł na drugiej stronie.
+
+	Wybierzcie grupę przestępczą i związane z nią miasto i okres działalności np. mafia Nowego Jorku z 1950 roku albo Yakuza z dzisiejszej Osaki. Postacie odgrywają konkurujących ze sobą \keyword{bandziorów}. Każda Postać posiada opis oraz imię. Używajcie k4 jako \HD. Celem każdej Postaci jest pokonanie reszty, by otrzymać względy \keyword{„big bossa”}, którego odgrywa prowadzący.
+
+	Rozgrywka jest podzielona na \keyword{rundy} trwające jeden tydzień. W każdej rundzie big boss zleca wam jakieś zadanie (kradzież klejnotów, uprowadzenie...), lecz to nie wykonanie zadania powinno być dla was najważniejsze. Raz podczas każdej rundy każdy z was może zaszkodzić innej Postaci i dzięki temu obniżyć jej \HD\ o 1. Pokonane postacie pod koniec tygodnia opuszczają miasto z lękiem patrząc przez ramię.
+
+	Jeżeli gracz uzna, że jest nieuczciwie traktowany przez pozo-stałych członków grupy, może \keyword{poprosić big bossa o przysługę}. Jeśli Postaci uda się rzut (4+), boss obija mordę wszystkim osobom, które zaatakowały poszkodowanego (automatycznie obniża to ich \HD\ o 2). Jeśli jednak skarżącemu nie uda się rzut, to on zostanie pobity.
+}
+
+\renewcommand{\settingURL}{\href{http://ludus-leonis.com/pl/nipajin}{LUDUS-LEONIS.COM/pl}}
