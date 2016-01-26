@@ -4,11 +4,12 @@
 PDF_NAME = "NIPAJIN-Flyer-Small-Fish"
 TEX_NAME = "flyer"
 VERSION_DE = $(shell grep Version}{ content.de.tex | sed -e "s/.*{//;s/}.*//")
+VERSION_EN = $(shell grep Version}{ content.en.tex | sed -e "s/.*{//;s/}.*//")
 VERSION_PL = $(shell grep Version}{ content.pl.tex | sed -e "s/.*{//;s/}.*//")
 
 default: de
 
-all: de pl
+all: de en pl
 
 setup:
 	mkdir -p out
@@ -24,6 +25,14 @@ de: setup images
 	xelatex \
 		-output-driver="xdvipdfmx -V 5 -z 9" \
 		-jobname=${PDF_NAME}-de-${VERSION_DE} \
+		-output-directory out ${TEX_NAME}
+
+en: setup images
+	ln -sf ../flyer.tex out/flyer.tex
+	ln -sf ../content.en.tex out/content.tex
+	xelatex \
+		-output-driver="xdvipdfmx -V 5 -z 9" \
+		-jobname=${PDF_NAME}-en-${VERSION_EN} \
 		-output-directory out ${TEX_NAME}
 
 pl: setup images
