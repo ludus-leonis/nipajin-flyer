@@ -1,7 +1,7 @@
 # (c) 2009-2016 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
-PDF_NAME = "NIPAJIN-Flyer-Small-Fish"
+PDF_NAME = "NIPAJIN-Flyer-Small-Fry"
 TEX_NAME = "flyer"
 VERSION_DE = $(shell grep Version}{ content.de.tex | sed -e "s/.*{//;s/}.*//")
 VERSION_EN = $(shell grep Version}{ content.en.tex | sed -e "s/.*{//;s/}.*//")
