@@ -14,7 +14,10 @@ setup:
 	ln -sf ../../nipajin.sty out/nipajin.sty
 	ln -sf ../../flyer.sty out/flyer.sty
 
-de: setup
+images:
+	ln -sf ../../images out/images
+
+de: setup images
 	ln -sf ../flyer.tex out/flyer.tex
 	ln -sf ../content.de.tex out/content.tex
 	xelatex \

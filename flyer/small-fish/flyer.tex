@@ -46,7 +46,13 @@
 % the red footer
 \backgroundbottom{primary}{11mm}
 \vfill
-\centerline{\fontsize{20pt}{20pt}\selectfont\color{white}\rulesURL}
+\centerline{%
+	\fontsize{20pt}{20pt}\selectfont\color{white}\rulesURL%
+	\hfill%
+	\raisebox{-1mm}[1mm][1mm]{\href{http://creativecommons.org/licenses/by-sa/4.0/}{%
+		\includegraphics[height=20pt]{\image{cc-by-sa.pdf}}%
+	}}%
+}
 
 \newpage % ---------------------------------------------------------------------
 
@@ -68,6 +74,12 @@
 % the gold footer
 \backgroundbottom{primary}{11mm}
 \vfill
-\centerline{\fontsize{20pt}{20pt}\selectfont\color{white}\settingURL}
+\centerline{%
+	\fontsize{20pt}{20pt}\selectfont\color{white}\settingURL%
+	\hfill%
+	\raisebox{-1mm}[1mm][1mm]{\href{http://creativecommons.org/licenses/by-sa/4.0/}{%
+		\includegraphics[height=20pt]{\image{cc-by-sa.pdf}}%
+	}}%
+}
 
 \end{document}
