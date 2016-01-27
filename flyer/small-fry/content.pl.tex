@@ -30,11 +30,14 @@
 
 % --- front page ---------------------------------------------------------------
 
-\renewcommand{\rulesTitle}{%
-	\noindent\color{primary}\fontsize{10.5mm}{12mm}\selectfont%
-	\makebox[\linewidth][l]{\spaceout{PRZEDSTAWIAMY WAM}} \par%
-	\noindent\color{white}\fontsize{10.5mm}{12mm}\selectfont%
-	\makebox[\linewidth][l]{\fffancy\spaceout{ERPEGOWĄ ULOTK}\hspace{2pt}Ę} \par%
+\renewcommand{\rulesTitle}{
+
+	\noindent\color{primary}\fontsize{10.5mm}{12mm}\selectfont\addfontfeature{WordSpace=2,LetterSpace=0.0}
+	PRZEDSTAWIAMY WAM%
+
+	\noindent\color{white}\fffancy\fontsize{10.5mm}{12mm}\selectfont\addfontfeature{WordSpace=2,LetterSpace=3}
+	ERPEGOWĄ ULOTKĘ
+
 }
 
 \renewcommand{\rulesHeadline}{Zasady gry}
@@ -61,11 +64,14 @@
 
 % --- back page ----------------------------------------------------------------
 
-\renewcommand{\settingTitle}{%
-	\noindent\color{primary}\fontsize{14pt}{12mm}\selectfont%
-	\makebox[\linewidth][l]{\spaceout{„Mam dla ciebie ulotkę nie do wyrzucenia.}”} \par%
-	\noindent\color{white}\fontsize{10.5mm}{12mm}\selectfont%
-	\makebox[\linewidth][l]{\fffancy\spaceout{ERPEGOWA ULOTKA}} \par%
+\renewcommand{\settingTitle}{
+
+	\noindent\color{primary}\fontsize{14pt}{12mm}\selectfont\addfontfeature{WordSpace=2,LetterSpace=6}
+	„Mam dla ciebie ulotkę nie do wyrzucenia.”
+
+	\noindent\color{white}\fffancy\fontsize{10.5mm}{12mm}\selectfont\addfontfeature{WordSpace=2,LetterSpace=2}
+	ERPEGOWA ULOTKA
+
 }
 
 \renewcommand{\settingHeadline}{Scenariusz: Płotki}

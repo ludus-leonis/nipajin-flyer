@@ -37,11 +37,14 @@
 
 % --- front page ---------------------------------------------------------------
 
-\renewcommand{\rulesTitle}{%
-	\noindent\color{primary}%\fontsize{10.5mm}{12mm}\selectfont%
-	\makebox[\linewidth][l]{\spaceout{PLAY ME -- I AM A}} \par%
-	\noindent\color{white}%\fontsize{10.5mm}{12mm}\selectfont%
-	\makebox[\linewidth][l]{\fffancy\spaceout{LEAFLET RPG!}} \par%
+\renewcommand{\rulesTitle}{\fontsize{12.5mm}{12mm}\selectfont
+
+	\noindent\color{primary}\addfontfeature{WordSpace=1.6,LetterSpace=4.0}
+		PLAY ME -- I AM A
+
+	\noindent\color{white}\fffancy\fontsize{12.5mm}{12mm}\selectfont\addfontfeature{WordSpace=2,LetterSpace=12.0}
+		LEAFLET RPG!
+
 }
 
 \renewcommand{\rulesHeadline}{Rules}
@@ -70,13 +73,18 @@
 \renewcommand{\rulesURL}{\href{http://ludus-leonis.com/en/nipajin}{LUDUS-LEONIS.COM/en/}}
 
 % --- back page ----------------------------------------------------------------
-\renewcommand{\settingTitle}{%
-	\noindent\color{primary}\fontsize{5mm}{6mm}\selectfont% , and that day may never come,
-	\makebox[\linewidth][l]{\spaceout{SOMEDAY, AND THAT DAY MAY NEVER}} \par%
-	\noindent\color{primary}\fontsize{5mm}{6mm}\selectfont% , and that day may never come,
-	\makebox[\linewidth][l]{\spaceout{COME, I'LL CALL UPON YOU TO PLAY THIS}} \par%
-	\noindent\color{white}\fontsize{12.5mm}{11mm}\selectfont%
-	\makebox[\linewidth][l]{\fffancy\spaceout{LEAFLET RPG!}} \par%
+
+\renewcommand{\settingTitle}{
+
+	\noindent\color{primary}\fontsize{5mm}{6mm}\selectfont\addfontfeature{WordSpace=2,LetterSpace=14.0}
+		SOMEDAY, AND THAT DAY MAY NEVER
+
+	\noindent\color{primary}\fontsize{5mm}{6mm}\selectfont\addfontfeature{WordSpace=2,LetterSpace=6}
+		COME, I'LL CALL UPON YOU TO PLAY THIS
+
+	\noindent\color{white}\fffancy\fontsize{12.5mm}{12mm}\selectfont\addfontfeature{WordSpace=2,LetterSpace=12.0}
+		LEAFLET RPG!
+
 }
 
 \renewcommand{\settingHeadline}{Small Fry}

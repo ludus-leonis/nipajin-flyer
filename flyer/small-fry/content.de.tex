@@ -32,12 +32,16 @@
 
 % --- front page ---------------------------------------------------------------
 
-\renewcommand{\rulesTitle}{%
-	\noindent%
-	\color{primary}\setbox\formbox\hbox{\addfontfeature{LetterSpace=-1.0}GESTATTEN,\,}\usebox\formbox%
-	\color{white}\makebox[\dimexpr\linewidth-\wd\formbox\relax][l]{\fffancy\expandafter\spaceout{FLYER}} \par%
-	\noindent%
-	\makebox[\linewidth][l]{\fffancy\spaceout{ROLLENSPIEL!}} \par%
+\renewcommand{\rulesTitle}{\fontsize{12.5mm}{12mm}\selectfont
+
+	\noindent\color{primary}\addfontfeature{LetterSpace=-1.0}
+		GESTATTEN,
+	\color{white}\fffancy\addfontfeature{LetterSpace=2.0}
+		FLYER
+
+	\noindent\fffancy\addfontfeature{LetterSpace=12.0}
+		ROLLENSPIEL!
+
 }
 
 \renewcommand{\rulesHeadline}{Spielregeln}
@@ -63,12 +67,18 @@
 
 % --- back page ----------------------------------------------------------------
 
-\renewcommand{\settingTitle}{%
-	\noindent%
-	\color{primary}\setbox\formbox\hbox{\parbox[b]{6cm}{\fontsize{11.0pt}{14pt}\selectfont\addfontfeature{LetterSpace=-1.0}„Eines Tages, vielleicht auch nie, werde \\ich dich bitten, diesen Flyer zu spielen.“}}\usebox\formbox%
-	\color{white}\fffancy\makebox[\dimexpr\linewidth-\wd\formbox\relax][l]{\expandafter\spaceout{FLYER}} \par%
-	\noindent%
-	\makebox[\linewidth][l]{\spaceout{ROLLENSPIEL!}} \par%
+\renewcommand{\settingTitle}{\fontsize{12.5mm}{12mm}\selectfont
+
+	\noindent\color{primary}\addfontfeature{LetterSpace=1.0}
+		\parbox[b]{6.1cm}{\fontsize{11.0pt}{14pt}\selectfont
+			„Eines Tages, vielleicht auch nie, werde \\ich dich bitten, diesen Flyer zu spielen.“
+		}
+	\color{white}\fffancy\addfontfeature{LetterSpace=2.0}
+		FLYER
+
+	\noindent\fffancy\addfontfeature{LetterSpace=12.0}
+		ROLLENSPIEL!
+
 }
 
 \renewcommand{\settingHeadline}{Kleine Fische}
