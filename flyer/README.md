@@ -1,4 +1,4 @@
-# NIP'AJIN Shots
+# NIP'AJIN Flyer
 
 [Deutsch](README.md) | [English](README.en.md).
 
