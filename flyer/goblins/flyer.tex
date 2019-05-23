@@ -1,4 +1,4 @@
-% (c) 2015-2016 by Markus Leupold-Löwenthal
+% (c) 2019 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 \documentclass{article}
@@ -21,8 +21,8 @@
 \newcommand{\settingURL}{}
 
 % Makefile will map the current language into those files
-\input{rules.tex}
 \input{content.tex}
+\input{rules.tex}
 
 % ##############################################################################
 % ##############################################################################
@@ -69,13 +69,13 @@
 
 \newpage % ---------------------------------------------------------------------
 
-% gold is the new red
-\DefineNamedColor{named}{primary}{cmyk}{0.00,0.31,0.65,0.29} % gold
+% green is the new red
+\DefineNamedColor{named}{primary}{cmyk}{0.10,0.00,0.71,0.29} % goblin green
 
-% gangster background image
+% goblin background image
 \renewcommand{\bgboxinjectonce}{
 	\put(0,0){\parbox[b][\paperheight]{\paperwidth}{
-		\vfill\centering\includegraphics[height=148mm]{\image{gangster.pdf}}\vfill}
+		\vfill\centering\includegraphics[height=148mm]{\image{goblins.pdf}}\vfill}
 	}
 }
 
@@ -84,7 +84,7 @@
 \vspace*{3mm}
 \backgroundtop{trueBlack}{200mm}
 
-% the gold headline
+% the green headline
 \mybanner{\MakeUppercase{\settingHeadline}}{\settingHeadline}
 \vspace*{2mm}
 
@@ -95,7 +95,7 @@
 
 }
 
-% the gold footer
+% the green footer
 \backgroundbottom{primary}{14mm}
 \vfill
 \centerline{%

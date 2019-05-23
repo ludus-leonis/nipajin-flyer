@@ -16,11 +16,12 @@ setup:
 	ln -sf ../../nipajin.sty out/nipajin.sty
 	ln -sf ../../flyer.sty out/flyer.sty
 
-images:
-	ln -sf ../../images out/images
+images: setup
+	ln -sf ../images out/images
 
-de: setup images
+de: images
 	ln -sf ../flyer.tex out/flyer.tex
+	ln -sf ../../core/rules.de.tex out/rules.tex
 	ln -sf ../content.de.tex out/content.tex
 	xelatex \
 		-output-driver="xdvipdfmx -V 5 -z 9" \
@@ -29,6 +30,7 @@ de: setup images
 
 en: setup images
 	ln -sf ../flyer.tex out/flyer.tex
+	ln -sf ../../core/rules.en.tex out/rules.tex
 	ln -sf ../content.en.tex out/content.tex
 	xelatex \
 		-output-driver="xdvipdfmx -V 5 -z 9" \
@@ -37,6 +39,7 @@ en: setup images
 
 pl: setup images
 	ln -sf ../flyer.tex out/flyer.tex
+	ln -sf ../../core/rules.pl.tex out/rules.tex
 	ln -sf ../content.pl.tex out/content.tex
 	xelatex \
 		-output-driver="xdvipdfmx -V 5 -z 9" \

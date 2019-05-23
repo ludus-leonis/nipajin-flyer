@@ -1,0 +1,62 @@
+% (c) 2019 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply one-way compatible licenses.
+
+% CHANGELOG-de
+%
+% v1.0
+%   - first version
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\say}[1]{„\textit{#1}“}
+\setdefaultlanguage[spelling=new]{german}
+
+\renewcommand{\fsFront}{\fontsize{11pt}{13.2pt plus 0pt minus 0pt}}
+\renewcommand{\fsBack}{\fontsize{11pt}{13.2pt plus 0pt minus 0pt}}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdftitle={NIP'AJIN Flyer-Rollenspiel},
+	pdfauthor={Markus Leupold-Loewenthal},
+	pdfsubject={Ein NIP'AJIN-Rollenspiel auf einem Flyer. Setting und Regeln inklusive.},
+	pdfkeywords={nipajin, nip'ajin, Rollenspiel, System, frei, RSP, RPG, Flyer, Goblins}
+}
+
+\renewcommand{\flyerVersion}{v1.0.0}
+\renewcommand{\flyerCredits}{%
+	Text und Layout:~Markus Leupold-Löwenthal; Illustrationen:~Bettina Ott, all-silhouettes.com%
+}
+
+% --- back page ----------------------------------------------------------------
+
+\renewcommand{\settingTitle}{\fontsize{12.5mm}{12mm}\selectfont
+
+	\noindent\color{primary}\addfontfeature{LetterSpace=1.0}
+		\parbox[b]{6.1cm}{\fontsize{11.0pt}{14pt}\selectfont
+			Ein Szenario für 4 bis 6 Spieler. Die Re-\\geln findest du auf der anderen Seite.
+		}
+	\color{white}\fffancy\addfontfeature{LetterSpace=2.0}
+		FLYER
+
+	\noindent\fffancy\addfontfeature{LetterSpace=12.0}
+		ROLLENSPIEL!
+
+}
+
+\renewcommand{\settingHeadline}{NIP'AJIN Goblins}
+
+\renewcommand{\settingText}{%
+	\noindent
+	Ihr seid \keyword{Goblins} -- kleine, grüne, chaotische Kreaturen mit hoher Stimme, einsilbigen Namen wie \say{Puk} oder \say{Mop} und dem Vierseiter als \HD. Euer Stamm feiert gerade in eurem Dorf ein Fest zu Ehren des Goblin-Königs, als sich dieser verschluckt, röchelt und tot zusammen bricht. Jeder seiner ehemaligen, engsten Vertrauten -- das seid ihr -- fühlt sich zur Nachfolge berufen. Rauft darum: Wer unüberwunden bleibt, wird neuer König!
+
+	Das Spiel wird reihum in Runden abgehandelt. In der \keyword{ersten Runde} legt jeder Spieler ein Detail der Goblins, des Dorfes oder des Festes fest. Etwa \say{Wegen dem Fest brennt ein Freudenfeuer in der Dorfmitte.} oder \say{Der König starb an einem Stück Torte.} Ein Detail darf keinen Spieler bzw. Goblin ausgrenzen und darf keinem anderen Detail widersprechen.
+
+	Ab der \keyword{zweiten Runde} schildert jeder Spieler zuerst auf Basis eines Details eines anderen Spielers, wie sein Goblin damit versucht, jemandem zu schaden. Etwa \say{Puk versucht, Mop ins Feuer zu stoßen.} oder \say{Puk möchte Mop eine Kerze der Torte ins Auge rammen.} Lasst die Würfel entscheiden. Unabhängig von Erfolg oder Misserfolg legt der Spieler danach noch ein weiteres Detail fest.
+
+	Der Neid der Goblins verlangt, dass sie nur Gegner angreifen, deren \HD-Wert gleich oder höher ist. Goblins, die alleine in Führung liegen, jubeln stolz, statt anzugreifen.
+
+	%Das geht so lange, bis ein neuer König feststeht.
+}
+
+\renewcommand{\settingURL}{\href{https://ludus-leonis.com/de/nipajin}{ludus-leonis.com}}
