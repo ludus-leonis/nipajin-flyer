@@ -4,7 +4,7 @@
 
 ## Einleitung
 
-Ein NIP'AJIN Flyer ist ein Rollenspiel auf zwei A6 Seiten. Eine Seite enthält eine Kurzfassung des Würfelsystems von [NIP'AJIN](http://ludus-leonis.com/nipajin), die andere Seite ein kurzes Szenario. Der Flyer ist eigenständig spielbar.
+Ein NIP'AJIN Flyer ist ein Rollenspiel auf zwei A6 Seiten. Eine Seite enthält eine Kurzfassung des Würfelsystems von [NIP'AJIN](https://ludus-leonis.com/de/nipajin), die andere Seite ein kurzes Szenario. Der Flyer ist eigenständig spielbar.
 
 ## Über dieses Repository
 

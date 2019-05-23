@@ -163,8 +163,8 @@
 \newcommand{\PT}{{\ffdings \textup{b}}}
 \newcommand{\FT}{{\ffdings \textup{a}}}
 
-\newcommand{\nipajin}{\href{http://ludus-leonis.com/nipajin}{\makebox{NIP'AJIN}}}
-\newcommand{\ludusleonis}{\href{http://ludus-leonis.com/}{\makebox{LUDUS} \makebox{LEONIS}}}
+\newcommand{\nipajin}{\href{https://ludus-leonis.com/}{\makebox{NIP'AJIN}}}
+\newcommand{\ludusleonis}{\href{https://ludus-leonis.com/}{\makebox{LUDUS} \makebox{LEONIS}}}
 
 % --- images & graphics ------------------------------------------------
 
@@ -399,49 +399,3 @@
 ] {\makebox{\itshape\fffancy\fontsize{12pt}{12pt}\selectfont\color{primary}{\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}}};
 \end{tikzpicture}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
 }
-
-% This produces the black box at the top of the first page. Features the
-% logo, copyright stuff, plus some intro text.
-% 1 = copyright
-% 2 = version
-% 3 = translation & co | nobody
-% 4 = cc-disclaimer
-% 5 = side text
-\newcommand{\coverbanner}[5]{
-	\backgroundtop{trueBlack}{6cm}
-	\begin{multicols}{2}\raggedbottom\color{white}
-		\noindent
-		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
-
-			\centerline{\fffancy\fontsize{42pt}{42pt}\selectfont\color{white}{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
-			\centerline{\small\textbf{#1}}
-			\centerline{\small#2\expandafter\ifstrequal\expandafter{#3}{nobody}{}{; #3}}
-
-			\vspace*{5mm}
-
-			\centerline{%
-				\parbox{20mm}{\fontsize{11pt}{11pt}\selectfont\textbf{CC BY-SA 4.0}}%
-				\hspace{1mm}%
-				\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #4}%
-			}
-		}
-
-		\noindent
-		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
-			\noindent\textit{#5}
-
-			\vspace*{6pt}
-
-			\centerline{\href{http://ludus-leonis.com/nipajin}{\textbf{ludus-leonis.com/nipajin}}}
-		}
-
-	\end{multicols}
-	\vspace*{2mm}
-}
-
-% A way to produce similar looking "statblocks"
-% 1 = NSC/Monster name, e.g. "Giant rat"
-% 2 = hit die, e.g. "4"
-% 3 = action die, e.g. "6"
-% 4 = reaction die, e.g. "4"
-\newcommand{\nsc}[4]{\keyword{#1:} \HD#2, \AD#3 \RD#4}

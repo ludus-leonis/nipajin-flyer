@@ -4,7 +4,7 @@
 
 ## Introduction
 
-A NIP'AJIN Flyer is a pen'n'paper roleplaying game that fits on two A6 pages. The first page contains a summary of the rules / dice mechanics of [NIP'AJIN](http://ludus-leonis.com/nipajin), the second page a short scenario. Each flyer is self-contained and can be played as is.
+A NIP'AJIN Flyer is a pen'n'paper roleplaying game that fits on two A6 pages. The first page contains a summary of the rules / dice mechanics of [NIP'AJIN](https://ludus-leonis.com/en), the second page a short scenario. Each flyer is self-contained and can be played as is.
 
 ## About the repository
 
