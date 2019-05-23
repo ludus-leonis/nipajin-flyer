@@ -8,8 +8,9 @@
 \usepackage{flyer}
 
 % each language file has to re-define the following items:
-\newcommand{\flyerVersion}{v0.0}
+\newcommand{\flyerVersion}{v0.0.0}
 \newcommand{\flyerCredits}{}
+\newcommand{\rulesVersion}{v0.0.0}
 \newcommand{\rulesTitle}{}
 \newcommand{\rulesHeadline}{}
 \newcommand{\rulesText}{}
@@ -20,6 +21,7 @@
 \newcommand{\settingURL}{}
 
 % Makefile will map the current language into those files
+\input{rules.tex}
 \input{content.tex}
 
 % ##############################################################################

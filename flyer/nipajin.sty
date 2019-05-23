@@ -111,6 +111,10 @@
 % --- fonts & symbols --------------------------------------------------
 
 \usepackage{fontspec}
+
+% quick hack to re-enable WordSpace in /addfontfeature (https://tex.stackexchange.com/questions/290937)
+\ExplSyntaxOn\__fontspec_keys_define_code:nnn {fontspec-addfeatures} {WordSpace} {}\ExplSyntaxOff
+
 \usepackage{xltxtra}
 \usepackage{xunicode}
 
