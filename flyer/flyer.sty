@@ -8,6 +8,12 @@
 
 % none yet
 
+% --- print version support ----------------------------------------------------
+
+\newcommand\ifprint[1]{\ifx\printversion\undefined\else#1\fi}
+
+\newcommand\ifnotprint[1]{\ifx\printversion\undefined#1\else\fi}
+
 % --- page & basic text setup --------------------------------------------------
 
 \hypersetup{
@@ -27,7 +33,7 @@
 }
 
 % we crop away the bleed for the Web version. uncomment the following line to get the print version
-\usepackage[width=105mm,height=148mm,center]{crop} % crop away the 3mm
+\ifnotprint{\usepackage[width=105mm,height=148mm,center]{crop}} % crop away the 3mm
 
 % --- fonts & symbols ----------------------------------------------------------
 
